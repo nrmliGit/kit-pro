@@ -1,0 +1,102 @@
+.heading {
+  color: #0061f2;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+h5 {
+  font-size: 17.6px;
+  color: #363d47;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.menu {
+  display: none;
+}
+.carts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  width: 88%;
+  margin-inline: auto;
+}
+.cart {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.09);
+  border-radius: 6.5px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  & > p {
+    color: #69707a;
+    font-size: 14px;
+    font-weight: 500;
+
+    text-align: center;
+  }
+  & > div {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.cart:hover {
+  transition: 250ms;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.littleNav {
+  height: 0px;
+  overflow: hidden;
+  transition: 300ms;
+}
+
+.openMenu {
+  height: 250px;
+}
+.accountsDiv {
+  display: flex;
+  padding-block: 90px;
+  padding-inline: 70px;
+  border-top: 1px solid #ccc;
+}
+@media screen and (max-width: 980px) {
+  .accountsDiv {
+    flex-direction: column;
+
+    & > div {
+      border-right: none;
+      padding-bottom: 0;
+    }
+  }
+  .nav {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .header {
+    width: 78%;
+    margin-inline: auto;
+  }
+  .carts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 74%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .carts {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 74%;
+  }
+}
